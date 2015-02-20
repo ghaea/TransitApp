@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Iron Yard Test Runner</title>
+
+    <link rel="stylesheet" href="libs/mocha.css" />
+    <script src="libs/mocha.js"></script>
+    <script src="libs/chai.js"></script>
+    <script src="libs/underscore.js"></script>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/handlebars.js"></script>
+
+    <style>
+      header {
+        padding:10px;
+        vertical-align: top;
+        position: absolute;
+        top: 15px;
+      }
+
+      header a {
+        text-decoration: none;
+        font-size: 125%;
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="test.html">The Iron Yard Test Runner</a>
+    </header>
+    <div id="mocha"></div>
+
+    <script>
+      mocha.setup({
+        ui: "bdd"
+      }); 
+
+      var assert = chai.assert;
+      var expect = chai.expect;
+    </script>
+
+    <!-- add testing files between here -->
+
+    <script src="index.js"></script>
+    <script src="test/test.index.js"></script>
+
+    <!-- add testing files between here -->
+
+    <script>
+      var z = mocha.run();
+      console.log(z)
+    </script>
+
+  </body>
+</html>
