@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What's</title>
+	<link href="index.css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div class="header">
+		<div class="title">
+			Need A Fast Exit?
+		</div>
+		<div class="subTitle">
+			here are the nearest transit options to you
+		</div>
+	</div>
+
+	<div class="transit-container">
+
+		<div class="bigBike">
+			<p class="secTitle"><b>Bikeshare</b></p>
+			<div class="bikeshare-container">
+			
+			</div>
+		</div>
+
+
+
+		<div class="wmata-container">
+
+			<div class="allTrainStuff">
+
+				<div class="bigTrain">
+					<p class="secTitle"><b>Metro</b></p>
+				</div>
+
+				<div class="wmataStation-container">
+					
+					
+				</div>
+
+				<div class="wmataTrain-container">
+					
+				</div>
+
+				<div class="wmataBus-container">
+					
+				</div>
+			</div>	
+		</div>
+
+		<div class="footer">
+			ghaea|mark
+		</div>
+
+	</div>
+
+
+<!-- TEMPLATE -->
+
+	<!-- this contains all templates -->
+	
+
+	<template id="bikeshareTemplate">
+		<div class="bike">
+
+			<div class="bikeName">{{ name }}</div>
+
+			<div class="bikeInfo">
+
+				<div class="numBikes">{{ nbBikes }} bikes available</div>
+				<div class="docks">{{ nbEmptyDocks }} empty docks</div>
+			</div>
+		</div>
+
+		
+	</template>
+
+	<template id="wmataStationTemplate">
+		<!-- Show station name -->
+		<div class="stnName">{{ Name }}</div>
+	</template>
+
+	<template id="wmataTrainTemplate">
+		<div class="train {{ Line }}">
+			<!-- Show train color -->
+			<div class="lineColor">{{ Line }}</div>
+			<!-- Show direction train is headed-->
+			<div class="destination">{{ DestinationName }}</div>
+			<!-- Show minutes until arrival -->
+			<div class="min">in {{ Min }} min</div>
+		</div>
+	</template>
+
+
+
+
+	<script src="libs/jquery.js"></script>
+	<script src="libs/handlebars.js"></script>
+	<script src="libs/underscore.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
